@@ -12,7 +12,7 @@ The `NSString` objects that you've worked with so far are called "static" string
 
 In our examples that you've seen, most of the time we've just captured that return into the same string variable that we called the method on, but this isn't required when calling the method. It also isn't assured by the method that this will be the behavior every time.
 
-Wouldn't it be nice, if we had a string that we could just tack substrings onto without having to captur a return string every time? Well, we're in luck because that's exactly what `NSMutableString` is for!
+Wouldn't it be nice, if we had a string that we could just tack substrings onto without having to capture a return string every time? Well, we're in luck because that's exactly what `NSMutableString` is for!
 
 ## Creating an `NSMutableString`
 
