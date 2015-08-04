@@ -12,29 +12,33 @@ The `NSString` objects that you've worked with so far are called "static" string
 
 In our examples that you've seen, most of the time we've just captured that return into the same string variable that we called the method on, but this isn't required when calling the method. It also isn't assured by the method that this will be the behavior every time.
 
-Wouldn't it be nice, if we had a string that we could just tack substrings onto without having to captur a return string every time? Well, we're in luck because that's exactly what `NSMutableString` is for!
+Wouldn't it be nice, if we had a string that we could just tack substrings onto without having to capture a return string every time? Well, we're in luck because that's exactly what `NSMutableString` is for!
+
+![](https://curriculum-content.s3.amazonaws.com/ios/reading-ios-nsmutablestring/TMNTturtles.jpg)  
+—*We said "mutable" not "mutant"! Sigh.*
 
 ## Creating an `NSMutableString`
 
 Because the string literal (`@""`) creates `NSString` variables, we can't directly use it to create an `NSMutableString`. Instead, we have to use methods. To create an empty mutable string, use the `+alloc` and `-init` methods:
 
 ```objc
-NSMutableString *mWelcome = [[NSMutableString alloc] init];
+NSMutableString *welcome = [[NSMutableString alloc] init];
 ```
+
 You can create a mutable form of a static `NSString` object by calling the `mutableCopy` method on it. You can do this with either a string literal or submitting an existing string as the argument:
 
 ```objc
-NSMutableString *mWelcome = [@"Welcome" mutableCopy];
+NSMutableString *welcome = [@"Welcome" mutableCopy];
 
-NSLog(@"%@", mWelcome);
+NSLog(@"%@", welcome);
 ```
 OR
 
 ```objc
-NSString *welcome = @"Welcome";
-NSMutableString *mWelcome = [welcome mutableCopy];
+NSString *welcomeWord = @"Welcome";
+NSMutableString *welcome = [welcomeWord mutableCopy];
 
-NSLog(@"%@", mWelcome);
+NSLog(@"%@", welcome);
 ```
 Both of these will print: `Welcome`.
 
@@ -101,3 +105,11 @@ NSLog(@"%@", welcome);
 ```
 This will print: `Welcome to the Flatiron School!`.
 
+## Converting To An `NSString`
+
+It actually isn't necessary to convert an `NSMutableString` back to an `NSString`. For reasons that we'll discuss later regarding inheritance, an `NSMutableString` variable contains all of the functionality and form of an `NSString` variable, but adds onto it the new methods that we discussed (plus a few more that have more advanced use cases). Because of this, an `NSMutableString` can be passed around as an `NSString` with it's mutable identity kept secret.
+
+![](https://curriculum-content.s3.amazonaws.com/ios/reading-ios-nsmutablestring/TMNTtrenchcoats.jpg)  
+—*The Turtles in Disguise.*
+
+They've totally got us fooled.
