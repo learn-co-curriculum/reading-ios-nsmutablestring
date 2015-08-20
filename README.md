@@ -8,7 +8,7 @@
 
 ## Static vs Mutable
 
-The `NSString` objects that you've worked with so far are called "static" strings. In order to be altered at all, a static string has to be completely overwritten; this how the `stringByAppendingString:` method works. It actually returns a newly-created string that's the concatenation of argument string to the recipient string of the method call. 
+The `NSString` objects that you've worked with so far are called "static" strings. In order to be altered at all, a static string has to be completely overwritten; this is how the `stringByAppendingString:` method works. It actually returns a newly-created string that's the concatenation of the argument string to the recipient string of the method call. 
 
 In our examples that you've seen, most of the time we've just captured that return into the same string variable that we called the method on, but this isn't required when calling the method. It also isn't assured by the method that this will be the behavior every time.
 
@@ -107,7 +107,7 @@ This will print: `Welcome to the Flatiron School!`.
 
 ## Converting To An `NSString`
 
-It actually isn't necessary to convert an `NSMutableString` back to an `NSString`. For reasons that we'll discuss later regarding inheritance, an `NSMutableString` variable contains all of the functionality and form of an `NSString` variable, but adds onto it the new methods that we discussed (plus a few more that have more advanced use cases). Because of this, an `NSMutableString` can be passed around as an `NSString` with it's mutable identity kept secret.
+It actually isn't necessary to convert an `NSMutableString` back to an `NSString`. For reasons that we'll discuss later regarding inheritance, an `NSMutableString` variable contains all of the functionality and form of an `NSString` variable, but adds onto it the new methods that we discussed (plus a few more that have more advanced use cases). Because of this, an `NSMutableString` can be passed around as an `NSString` with its mutable identity kept secret.
 
 ![](https://curriculum-content.s3.amazonaws.com/ios/reading-ios-nsmutablestring/TMNTtrenchcoats.jpg)  
 —*The Turtles in Disguise.*
