@@ -113,4 +113,4 @@ It actually isn't necessary to convert an `NSMutableString` back to an `NSString
 —*The Turtles in Disguise.*
 
 They've totally got us fooled.
-<a href='https://learn.co/lessons/reading-ios-nsmutablestring' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-nsmutablestring' title='NSMutableString'>NSMutableString</a> on Learn.co and start learning to code for free.</p>
